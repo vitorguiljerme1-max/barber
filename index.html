@@ -4,237 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prime Barber</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #000, #444);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    header p a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .precos {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .precos h2 {
-      font-size: 2.2em;
-      margin-bottom: 30px;
-      color: #000;
-    }
-
-    .tabela {
-      max-width: 800px;
-      margin: auto;
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-
-    .tabela th, .tabela td {
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-      font-size: 1.1em;
-    }
-
-    .tabela th {
-      background-color: #222;
-      color: #fff;
-      text-transform: uppercase;
-    }
-
-    .tabela tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    .whatsapp-btn {
-      padding:5px 10px;
-      background-color:#25D366;
-      color:white;
-      text-decoration:none;
-      border-radius:5px;
-      font-weight:bold;
-    }
-
-    .contact {
-      padding: 50px 20px;
-      text-align: center;
-      background-color: #fff;
-      margin: 40px auto;
-      max-width: 500px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-
-    .contact h2 {
-      color: #000;
-      margin-bottom: 25px;
-    }
-
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .contact input, .contact select, .contact button {
-      padding: 12px;
-      font-size: 1em;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-    }
-
-    .contact button {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-weight: bold;
-    }
-
-    .contact button:hover {
-      background-color: #444;
-    }
-
-    footer {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 25px 20px;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <header>
-    <h1>Prime Barber</h1>
-    <p>WhatsApp: <a href="https://wa.me/+5581991911425" target="_blank">(81) 991911425</a> | 
-       Instagram: <a href="https://www.instagram.com/primebarber_01" target="_blank">@primebarber_01</a></p>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Prime Barber Logo">
+      </div>
+      <nav>
+        <a href="#services">Serviços</a>
+        <a href="#combos">Combos</a>
+        <a href="#contact">Agendamento</a>
+      </nav>
+    </div>
+    <div class="hero-text">
+      <h1>Prime Barber</h1>
+      <p>
+        WhatsApp: <a href="https://wa.me/5581991911425" target="_blank">(81) 99191-1425</a> |
+        Instagram: <a href="https://instagram.com/primebarber_01" target="_blank">@primebarber_01</a>
+      </p>
+    </div>
   </header>
 
-  <!-- Tabela de preços -->
-  <section class="precos">
+
+  <!-- TABELA DE SERVIÇOS -->
+  <section class="precos" id="services">
     <h2>Tabela de Serviços</h2>
     <table class="tabela">
       <tr><th>Serviço</th><th>Preço</th><th>Agendar</th></tr>
-      <tr>
-        <td>Social</td>
-        <td>R$20,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Social." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Degradê</td>
-        <td>R$25,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Degradê." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Degradê Navalhado</td>
-        <td>R$30,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Degradê%20Navalhado." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Cantos</td>
-        <td>R$10,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Cantos." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Barba</td>
-        <td>R$20,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Barba." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Sobrancelha</td>
-        <td>R$5,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Sobrancelha." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Pigmentação</td>
-        <td>R$20,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Pigmentação." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Nevou</td>
-        <td>R$55,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Nevou." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Luzes</td>
-        <td>R$35,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Luzes." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Reflexo Alinhado</td>
-        <td>R$45,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Reflexo%20Alinhado." target="_blank">WhatsApp</a></td>
-      </tr>
+      <tr><td>Social</td><td>R$20,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Social." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Degradê</td><td>R$25,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Degradê." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Degradê Navalhado</td><td>R$30,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Degradê%20Navalhado." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Cantos</td><td>R$10,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Cantos." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Barba</td><td>R$20,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Barba." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Sobrancelha</td><td>R$5,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Sobrancelha." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Pigmentação</td><td>R$20,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20uma%20Pigmentação." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Nevou</td><td>R$55,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Nevou." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Luzes</td><td>R$35,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Luzes." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Reflexo Alinhado</td><td>R$45,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20um%20Reflexo%20Alinhado." target="_blank">WhatsApp</a></td></tr>
     </table>
   </section>
 
-  <!-- Tabela de combos -->
-  <section class="precos">
+  <!-- TABELA DE COMBOS -->
+  <section class="precos" id="combos">
     <h2>Combos Promocionais</h2>
     <table class="tabela">
       <tr><th>Combo</th><th>Preço</th><th>Agendar</th></tr>
-      <tr>
-        <td>Social + Barba + Sobrancelha</td>
-        <td>R$40,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20o%20combo%20Social%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Degradê + Barba + Sobrancelha</td>
-        <td>R$45,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20o%20combo%20Degradê%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Navalhado + Barba + Sobrancelha</td>
-        <td>R$50,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20o%20combo%20Navalhado%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Corte + Pigmentação</td>
-        <td>R$40,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20o%20combo%20Corte%20+%20Pigmentação." target="_blank">WhatsApp</a></td>
-      </tr>
-      <tr>
-        <td>Cantos + Barba</td>
-        <td>R$25,00</td>
-        <td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Gostaria%20de%20agendar%20o%20combo%20Cantos%20+%20Barba." target="_blank">WhatsApp</a></td>
-      </tr>
+      <tr><td>Social + Barba + Sobrancelha</td><td>R$40,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Quero%20agendar%20o%20combo%20Social%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Degradê + Barba + Sobrancelha</td><td>R$45,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Quero%20agendar%20o%20combo%20Degradê%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Navalhado + Barba + Sobrancelha</td><td>R$50,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Quero%20agendar%20o%20combo%20Navalhado%20+%20Barba%20+%20Sobrancelha." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Corte + Pigmentação</td><td>R$40,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Quero%20agendar%20o%20combo%20Corte%20+%20Pigmentação." target="_blank">WhatsApp</a></td></tr>
+      <tr><td>Cantos + Barba</td><td>R$25,00</td><td><a class="whatsapp-btn" href="https://wa.me/5581991911425?text=Olá!%20Quero%20agendar%20o%20combo%20Cantos%20+%20Barba." target="_blank">WhatsApp</a></td></tr>
     </table>
   </section>
 
-  <!-- Contato -->
-  <section class="contact">
+  <!-- FORM DE AGENDAMENTO -->
+  <section class="contact" id="contact">
     <h2>Agende seu Horário</h2>
     <form id="agendamentoForm">
       <input type="text" id="nome" placeholder="Seu nome" required>
@@ -255,8 +83,9 @@
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Prime Barber | Desenvolvido com 💈 estilo</p>
+    <p>© 2025 Prime Barber | Desenvolvido com 💈 estilo @_vitorkr</p>
   </footer>
 
   <script>
@@ -265,7 +94,7 @@
       e.preventDefault();
       const nome = document.getElementById('nome').value;
       const servico = document.getElementById('servico').value;
-      const numeroWhats = "5581991911425"; // Coloque seu número do WhatsApp
+      const numeroWhats = "5581991911425";
       const mensagem = `Olá! Meu nome é ${nome} e gostaria de agendar um serviço de ${servico}.`;
       const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`;
       window.open(url, "_blank");
